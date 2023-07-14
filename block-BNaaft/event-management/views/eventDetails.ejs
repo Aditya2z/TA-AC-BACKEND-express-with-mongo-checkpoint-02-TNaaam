@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Details</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <% include partials/header.ejs %>
+    <div class="container-90">
+      <a href="/events" class="btn-black back">⬅ Go Back</a>
+      <div class="single-event-card">
+        <div class="title">
+          <h1>Title: <%= event.title %></h1>
+        </div>
+        <p class="details">Summary: <%= event.summary %></p>
+        <p class="details">Hosted by: <%= event.host %></p>
+        <p class="details">Start Date: <%= event.start_date %></p>
+        <p class="details">End Date: <%= event.end_date %></p>
+        <p class="details">Categories: <% event.event_category.forEach(function(category) { %>
+          <a href="/events?category=<%= category %>" class="btn-black"><%= category %></a>
+        <% }) %></p>
+        <p class="details">Location: <%= event.location %></p>
+        <p class="likes">Likes: <%= event.likes %> </p>
+        <a href="/events/<%= event._id%>/likes" class="btn-pink">Like</a>
+        <a href="/events/<%= event._id%>/update" class="btn-blue">Update</a>
+        <a href="/events/<%= event._id%>/delete" class="btn-red">Delete</a>
+        
+        <div class="remark-form">
+          <form action="/events/<%= event._id %>/remarks" method="post">    
+            <textarea name="title" cols="30" rows="5" placeholder="Write Remarks"></textarea>
+            <input type="submit" value="Remark" class="btn-black">
+          </form>
+        </div>
+        <section class="remark-field">
+          <h3>Remarks:</h3>
+          <% event.remarks.forEach(function(remark) { %>
+            <div class="single-remark">
+              <h4>👨 <%= remark.author%> :</h4>
+              <p><%= remark.title %></p>
+            </div>
+            <span class="likes-small">Likes: <%= remark.likes %></span>
+            <a href="/remarks/<%= remark._id %>/likes" class="btn-pink btn-small">Like</a>
+            <a href="/remarks/<%= remark._id%>/update" class="btn-blue btn-small">Edit</a>
+            <a href="/remarks/<%= remark._id%>/delete" class="btn-red btn-small">Delete</a>
+          <% }) %>
+        </section>
+      </div>
+    </div>
+    <% include partials/footer.ejs %>
+  </body>
+</html>
