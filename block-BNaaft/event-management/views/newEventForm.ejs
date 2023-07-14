@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Event Form</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+  <% include partials/header.ejs %>
+    <h1 class="title">Create New Event</h1>
+    <a href="/" class="btn-black back">⬅ Go Back</a>
+
+    <div class="container-90 single-event-card">
+      <form action="/events" method="post">
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" required />
+  
+        <label for="summary">Summary:</label>
+        <textarea id="summary" name="summary" required></textarea>
+  
+        <label for="host">Host:</label>
+        <input type="text" id="host" name="host" required />
+  
+        <label for="start_date">Start Date:</label>
+        <input type="date" id="start_date" name="start_date" required />
+  
+        <label for="end_date">End Date:</label>
+        <input type="date" id="end_date" name="end_date" required />
+  
+        <label for="event_category">Event Category:</label>
+        <input type="text" id="event_category" name="event_category" placeholder="Category1, Category2, Category3" required />
+  
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location" required />
+  
+        <button type="submit" class="btn-green">Create</button>
+      </form>
+    </div>
+    <% include partials/footer.ejs %>
+</body>
+</html>

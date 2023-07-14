@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    <% include partials/header.ejs %>
+    <div class="container-90">
+        <h1>Error</h1>
+        <p>An error occurred:</p>
+        <p><%= error.message %></p>
+        <% if (error.stack) { %>
+        <p><%= error.stack %></p>
+        <% } %>
+    </div>
+    <% include partials/footer.ejs %>
+</body>
+</html>

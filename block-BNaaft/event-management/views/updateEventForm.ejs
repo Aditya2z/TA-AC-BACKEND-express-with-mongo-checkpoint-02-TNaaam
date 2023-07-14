@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Update Form</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <% include partials/header.ejs %>
+    <h1 class="title">Update the Event</h1>
+    <a href="/events" class="btn-black back">⬅ Back to Event List</a>
+    <div>
+      <a href="/events/<%= event._id %>" class="btn-black btn-black-2"
+        >⬅ Back to Event Details</a
+      >
+    </div>
+
+    <div class="container-90 single-event-card">
+      <form action="/events/<%= event._id %>" method="post">
+        <label for="title">Title:</label>
+        <input
+          type="text"
+          id="title"
+          name="title"
+          value="<%= event.title %>"
+          required
+        />
+  
+        <label for="summary">Summary:</label>
+        <textarea
+          id="summary"
+          name="summary"
+          required
+        ><%= event.summary %>"</textarea>
+  
+        <label for="host">Host:</label>
+        <input
+          type="text"
+          id="host"
+          name="host"
+          value="<%= event.host %>"
+          required
+        />
+  
+        <label for="start_date">Start Date:</label>
+        <input
+          type="date"
+          id="start_date"
+          name="start_date"
+          value="<%= event.start_date %>"
+          required
+        />
+  
+        <label for="end_date">End Date:</label>
+        <input
+          type="date"
+          id="end_date"
+          name="end_date"
+          value="<%= event.end_date %>"
+          required
+        />
+  
+        <label for="event_category">Event Category:</label>
+        <input
+          type="text"
+          id="event_category"
+          name="event_category"
+          value="<%= event.event_category.join(" ") %>"
+          required
+        />
+  
+        <label for="location">Location:</label>
+        <input
+          type="text"
+          id="location"
+          name="location"
+          value="<%= event.location %>"
+          required
+        />
+  
+        <button type="submit" class="btn-blue">Update</button>
+      </form>
+    </div>
+    <% include partials/footer.ejs %>
+  </body>
+</html>

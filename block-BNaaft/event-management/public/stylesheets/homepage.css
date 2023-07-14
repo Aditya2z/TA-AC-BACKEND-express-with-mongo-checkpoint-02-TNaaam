@@ -1,0 +1,371 @@
+/* CSS Reset */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Custom Styling Starts Here */
+
+/* Font-family Import */
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+/* My Resets */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+
+/* General Styles */
+html {
+  font-size: 16px;
+}
+body {
+  font-family: "Ubuntu", sans-serif;
+  max-width: 1370px;
+  width: 100%;
+  line-height: 1.5;
+}
+button,
+input,
+select,
+textarea {
+  font-family: "Ubuntu", sans-serif;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  cursor: pointer;
+  padding: 0;
+  font-weight: 600;
+}
+img,
+audio,
+video {
+  width: 100%;
+}
+
+/* Variables */
+:root {
+  --primary: #3498db;
+  --secondary: #ff7f50;
+  --accent: #ffffff;
+}
+
+/* Containers */
+.container-90 {
+  max-width: 90%;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Flex */
+.flex {
+  display: flex;
+}
+.flex-column {
+  flex-direction: column;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.justify-center {
+  justify-content: center;
+}
+.align-center {
+  align-items: center;
+}
+.wrap {
+  flex-wrap: wrap;
+}
+.flex-24 {
+  flex: 0 1 24%;
+}
+.flex-32 {
+  flex: 0 1 32%;
+}
+.flex-49 {
+  flex: 0 1 49%;
+}
+
+/* Headings */
+h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  text-align: center;
+}
+h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+h3 {
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+/* Texts */
+.text {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+/* Buttons */
+.btn {
+  background: var(--primary);
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5rem 2rem;
+  border-radius: 0.25rem;
+}
+
+/* Header Styles */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--accent);
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header a {
+  text-decoration: none;
+  color: var(--primary);
+  font-weight: bold;
+}
+
+header .home {
+  font-size: 24px;
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+header nav ul li {
+  margin-left: 20px;
+}
+
+header nav ul li a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+  color: black;
+}
+
+/* Footer Styles */
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--accent);
+  padding: 20px;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--primary);
+  font-weight: bold;
+}
+
+/* Main Styles */
+.title {
+  text-align: center;
+}
+
+.title h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: var(--accent);
+}
+
+.title p {
+  font-size: 18px;
+  color: var(--accent);
+}
+
+main {
+  background-image: linear-gradient(
+      rgba(50, 50, 50, 0.25),
+      rgba(50, 50, 50, 0.25)
+    ),
+    url(../images/homepage\ background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 510px;
+  padding: 10px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 31%;
+  height: 350px;
+  background-color: var(--accent);
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 2px;
+  overflow: hidden;
+  margin: 20px;
+}
+
+.card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  overflow: hidden;
+}
+
+.card h3 {
+  margin-top: 10px;
+}
+
+.card a {
+  margin-top: 10px;
+}
+
+.card figure {
+  width: 100%;
+}
+
+.card-holder {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
