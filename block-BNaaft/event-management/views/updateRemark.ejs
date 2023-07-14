@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Update Remark</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <% include partials/header.ejs %>
+    <h1 class="title">Update Remark</h1>
+    <div class="container-90 single-event-card">
+      <a href="/events" class="btn-black back">⬅ Back to Event List</a>
+      <div>
+        <a href="/events/<%= remark.event %>" class="btn-black btn-black-2"
+          >⬅ Back to Event Details</a
+        >
+      </div>
+      <div class="card">          
+          <div class="comment-form">
+            <form action="/remarks/<%= remark._id %>" method="post">    
+              <textarea name="title" cols="30" rows="5" placeholder="Write Remark"><%= remark.title %></textarea>
+              <input type="submit" value="Update Remark" class="btn-black">
+            </form>
+          </div>
+          <% include partials/footer.ejs %>
+      </div>
+    </div>
+  </body>
+</html>

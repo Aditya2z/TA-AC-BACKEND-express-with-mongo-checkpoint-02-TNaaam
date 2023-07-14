@@ -1,0 +1,463 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Custom Styling Starts Here */
+
+/* Font-family Import */
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+/* My Resets */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+
+/* General Styles */
+html {
+  font-size: 16px;
+}
+body {
+  font-family: "Ubuntu", sans-serif;
+  max-width: 1370px;
+  width: 100%;
+  line-height: 1.5;
+}
+button,
+input,
+select,
+textarea {
+  font-family: "Ubuntu", sans-serif;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  cursor: pointer;
+  padding: 0;
+  font-weight: 600;
+}
+img,
+audio,
+video {
+  width: 100%;
+}
+
+/* Variables */
+:root {
+  --primary: #3498db;
+  --secondary: #ff7f50;
+  --accent: #ffffff;
+}
+
+/* Containers */
+.container-90 {
+  max-width: 90%;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Flex */
+.flex {
+  display: flex;
+}
+.flex-column {
+  flex-direction: column;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.justify-center {
+  justify-content: center;
+}
+.align-center {
+  align-items: center;
+}
+.wrap {
+  flex-wrap: wrap;
+}
+.flex-24 {
+  flex: 0 1 24%;
+}
+.flex-49 {
+  flex: 0 1 49%;
+}
+.flex-70 {
+  flex: 0 1 70%;
+}
+
+/* Headings */
+h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  text-align: center;
+}
+h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+h3 {
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+/* Texts */
+.text {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+/* Buttons */
+.btn {
+  background: var(--primary);
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5rem 2rem;
+  border-radius: 0.25rem;
+}
+
+/* Header Styles */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--accent);
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header a {
+  text-decoration: none;
+  color: var(--primary);
+  font-weight: bold;
+}
+
+header .home {
+  font-size: 24px;
+}
+
+header .home:hover {
+  color: black;
+  transition: all 250ms ease-in-out;
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+header nav ul li {
+  margin-left: 20px;
+}
+
+header nav ul li a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+  color: black;
+}
+
+
+/* Footer Styles */
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--accent);
+  padding: 20px;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1)
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--primary);
+  font-weight: bold;
+}
+
+/* Main Styles */
+.title {
+  text-align: center;
+}
+
+.title h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.title p {
+  font-size: 18px;
+  color: #777;
+}
+
+.btn-green,
+.btn-blue,
+.btn-red,
+.btn-pink,
+.btn-black {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+  margin: 10px 10px 10px 0px;
+  font-size: .875rem;
+}
+
+.btn-green {
+  background-color: #4caf50;
+}
+
+.btn-blue {
+  background-color: #2196f3;
+}
+
+.btn-red {
+  background-color: #f44336;
+}
+
+.btn-pink {
+  background-color: #9c27b0;
+}
+
+.btn-black {
+  background-color: rgb(17, 17, 17);
+}
+
+.btn-green:hover,
+.btn-blue:hover,
+.btn-red:hover,
+.btn-pink:hover,
+.btn-black:hover {
+  opacity: 0.8;
+}
+
+/* New Event Form Styles */
+
+form {
+  margin-top: 20px;
+}
+
+form label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+form button[type="submit"] {
+  margin-top: 20px;
+}
+
+/* Additional Styles */
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.back {
+  position: absolute;
+  top: 75px;
+  left: 15px;
+}
+.btn-black-2 {
+  position: absolute;
+  top: 75px;
+  left: 200px;
+}
+
+.event-card,
+.single-event-card {
+  background-color: #c2dcee;
+  padding: 20px;
+  margin: 10px 0;
+  border-radius: 10px;
+}
+
+.single-event-card {
+  margin: 10px auto;
+}
+
+.single-remark {
+  background-color: #d2ecff;
+  padding: 20px 20px 30px 20px;
+  border-radius: 10px;
+}
+
+.btn-small {
+  padding: 3px 5px;
+  font-size: 10px;
+  margin: 5px 5px 15px 5px;
+  position: relative;
+  top: -32px;
+  left: -40px;
+}
+
+.btn-add-2 {
+  position: absolute;
+  top: 75px;
+  right: 15px;
+}
+
+.details {
+  margin-bottom: 10px;
+}
+
+.details p {
+  margin-bottom: 5px;
+}
+
+.likes {
+  margin: 10px 0;
+}
+
+.likes-small {
+  font-size: 12px;
+}
+
+.sidebar {
+  background-color: #c2dcee;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px;
+  font-weight: bold;
+}

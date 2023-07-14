@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/homepage.css" />
+  </head>
+  <body>
+    <% include partials/header.ejs %>
+    <main>
+      <div class="title">
+        <h1 class="title"><%= title %></h1>
+        <p>One Stop Solution to Organising Events</p>
+      </div>
+      <div class="container-90 card-holder">
+        <div class="card">
+          <figure>
+            <img src="/images/add event.jpg" alt="Add Event" />
+          </figure>
+          <h3>Want to add events?</h3>
+          <a href="/events/new" class="btn-black">Add Event</a>
+        </div>
+
+        <div class="card">
+          <figure>
+            <img src="/images/get events.jpg" alt="Get Event" />
+          </figure>
+          <h3>What's happening arround?</h3>
+          <a href="/events" class="btn-black">Get Events</a>
+        </div>
+
+        <div class="card">
+          <figure>
+            <img src="/images/help.jpg" alt="Need Help?" />
+          </figure>
+          <h3>Let Us Help You!</h3>
+          <a href="/events" class="btn-black">Contact</a>
+        </div>
+      </div>
+    </main>
+    <% include partials/footer.ejs %>
+  </body>
+</html>
